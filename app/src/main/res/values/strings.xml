@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">please</string>
+    <string name="title_activity_share_aride2">Share a Ride</string>
+    <string name="title_activity_offer_ride">OfferRide</string>
+    <string name="title_activity_offer_aride">Map</string>
+    <string name="title_activity_share_aride">Map</string>
+</resources>

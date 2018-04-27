@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context="com.example.user.WaslnyYaHandasa.SaveInfo">
+
+    <EditText
+        android:id="@+id/Fname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="First name"
+        app:layout_constraintBottom_toTopOf="@+id/Lname"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/Lname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Last name"
+        app:layout_constraintBottom_toTopOf="@+id/CID"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Fname" />
+
+    <EditText
+        android:id="@+id/CID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="College ID"
+        app:layout_constraintBottom_toTopOf="@+id/phone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Lname" />
+
+    <EditText
+        android:id="@+id/phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Phone number"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CID" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="11dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="Please specify your gender"
+        app:layout_constraintBottom_toTopOf="@+id/radioSex"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phone" />
+
+    <RadioGroup
+        android:id="@+id/radioSex"
+        android:layout_width="133dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="11dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintEnd_toEndOf="@+id/textView4"
+        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+        <RadioButton
+            android:id="@+id/female"
+            android:layout_width="133dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="Female" />
+
+        <RadioButton
+            android:id="@+id/male"
+            android:layout_width="133dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Male" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginLeft="17dp"
+        android:text="User type"
+        app:layout_constraintBottom_toTopOf="@+id/radioType"
+        app:layout_constraintStart_toStartOf="@+id/radioType"
+        app:layout_constraintTop_toBottomOf="@+id/radioSex" />
+
+
+    <RadioGroup
+        android:id="@+id/radioType"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="61dp"
+        android:layout_marginRight="61dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/next"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" >
+
+        <RadioButton
+            android:id="@+id/Student"
+            android:layout_width="133dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="104dp"
+            android:layout_marginLeft="9dp"
+            android:layout_marginRight="104dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="8dp"
+            android:checked="true"
+            android:text="Student"
+            app:layout_constraintEnd_toStartOf="@+id/next"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/radioType" />
+
+        <RadioButton
+            android:id="@+id/doctor"
+            android:layout_width="133dp"
+            android:layout_height="wrap_content"
+            android:text="Doctor"
+            android:layout_marginStart="9dp"
+            android:layout_marginLeft="9dp"
+            app:layout_constraintEnd_toEndOf="@+id/ta"
+            app:layout_constraintStart_toStartOf="@+id/Student"
+            app:layout_constraintTop_toBottomOf="@+id/Student" />
+
+    <RadioButton
+        android:id="@+id/ta"
+        android:layout_width="133dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="9dp"
+        android:layout_marginStart="9dp"
+        android:text="TA"
+        app:layout_constraintEnd_toEndOf="@+id/radioSex"
+        app:layout_constraintStart_toStartOf="@+id/radioType"
+        app:layout_constraintTop_toBottomOf="@+id/doctor" />
+
+    </RadioGroup>
+    <Button
+        android:id="@+id/next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="72dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
+        android:text="Next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
